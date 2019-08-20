@@ -1,0 +1,41 @@
+{
+    "name": "razonyang/yii2-uploader",
+    "description": "Yii2 Uploader",
+    "type": "yii2-extension",
+    "keywords": ["yii2","extension","uploader", "file upload"],
+    "license": "BSD-3-Clause",
+    "authors": [
+        {
+            "name": "Razon Yang",
+            "email": "razonyang@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "php": "^7.1",
+        "creocoder/yii2-flysystem": "^0.9.3",
+        "yiisoft/yii2": "~2.0.13"
+    },
+    "require-dev": {
+        "codeception/codeception": "^3.0",
+        "codeception/verify": "^1.1",
+        "phpunit/phpunit": "^7"
+    },
+    "autoload": {
+        "psr-4": {
+            "RazonYang\\Yii2\\Uploader\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "RazonYang\\Yii2\\Uploader\\Tests\\": "tests/"
+        }
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
+        }
+    ]
+}
