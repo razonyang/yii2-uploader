@@ -8,6 +8,11 @@ Yii2 Uploader
 [![Total Downloads](https://img.shields.io/packagist/dt/razonyang/yii2-uploader.svg)](https://packagist.org/packages/razonyang/yii2-uploader)
 [![LICENSE](https://img.shields.io/github/license/razonyang/yii2-uploader)](LICENSE)
 
+Supports multiple filesystems:
+
+- [Yii2 Flysystem](https://github.com/creocoder/yii2-flysystem) - Local, FTP, AWS S3, Azure filesystem etc.
+- [Aliyun OSS Flysystem](https://github.com/razonyang/yii2-flysystem-aliyun-oss)
+
 
 Installation
 ------------
@@ -24,14 +29,14 @@ Configuration:
 ```php
 return [
     'components' => [
+        'filesystem' => [
+            'class' => \creocoder\flysystem\LocalFilesystem::class,
+            'path' => '@webroot/resources',
+        ],
         'uploader' => [
             'class' => \RazonYang\Yii2\Uploader\Uploader::class,
             'host' => 'http://localhost/resources', // the hostname relative to your uploaded files
-            'filesystem' => [
-                // filesystem 
-                'class' => \creocoder\flysystem\LocalFilesystem::class,
-                'path' => '@webroot/resources',
-            ],
+            'filesystem' => 'filesystem',
         ],
     ],
 ];

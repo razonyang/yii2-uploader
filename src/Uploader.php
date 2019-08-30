@@ -16,10 +16,7 @@ class Uploader extends Component implements UploaderInterface
     /**
      * @var Filesystem $filesystem
      */
-    public $filesystem = [
-        'class' => LocalFilesystem::class,
-        'path' => '@webroot/resources',
-    ];
+    public $filesystem = 'filesystem';
 
     /**
      * @var string $host hostname
